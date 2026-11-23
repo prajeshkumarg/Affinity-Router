@@ -2,9 +2,6 @@
 
 **Cache-aware request routing for multi-LoRA LLM serving on two GPUs.**
 
-Term project for *Cloud and Machine Learning* (NYU Courant, Fall 2026).
-Team: Prajesh Kumar Ganesh Kumar, Shashaank R.
-
 ## The question
 
 We serve one 8B base model with two LoRA adapters (finance and coding) on a fixed budget of two A100 GPUs. Should each domain get its own replica (**static split**), or should both replicas serve both domains from a **shared pool** with a router that sends requests where their prefix is already cached?

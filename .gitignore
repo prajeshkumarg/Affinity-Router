@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+secrets/
+
+# Large artifacts
+results/
+checkpoints/
+adapters/
+models/
+data/
+*.safetensors
+*.bin
+*.sqf
+*.ext3
+
+# Slurm logs
+slurm-*.out
+
+# Claude local settings
+.claude/settings.local.json
+
+# OS
+.DS_Store

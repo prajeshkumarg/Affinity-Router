@@ -1,0 +1,15 @@
+[project]
+name = "affinity-router"
+version = "0.1.0"
+description = "Cache-aware request routing for multi-LoRA LLM serving on two GPUs"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

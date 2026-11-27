@@ -1,0 +1,28 @@
+domain: finance
+seed: 42
+
+data:
+  sentiment_train: 6000     # from FinGPT/fingpt-sentiment-train
+  sentiment_eval: 300
+  convfinqa_train: 6000     # from FinGPT/fingpt-convfinqa (train split)
+  convfinqa_eval: 300       # from the test split
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: all-linear
+
+train:
+  max_length: 2048          # longer examples are dropped in prep, never truncated
+  per_device_batch_size: 4
+  grad_accum: 4             # effective batch 16
+  learning_rate: 1.0e-4
+  lr_scheduler: cosine
+  warmup_frac: 0.03
+  max_steps: 750            # ~1 epoch over ~12k examples; fixed, not swept
+  logging_steps: 10
+  eval_steps: 250
+  save_steps: 250
+  save_total_limit: 2
+  optim: paged_adamw_8bit

@@ -9,7 +9,8 @@ __pycache__/
 .env.*
 secrets/
 
-# Large artifacts
+# Large artifacts (overlay, model, datasets, adapters, checkpoints)
+artifacts/
 results/
 checkpoints/
 adapters/
@@ -28,3 +29,11 @@ slurm-*.out
 
 # OS
 .DS_Store
+
+# Slurm logs (keep the folder)
+logs/*
+!logs/.gitkeep
+
+# Tool caches
+.ruff_cache/
+.pytest_cache/

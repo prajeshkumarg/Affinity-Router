@@ -26,6 +26,7 @@ If something seems worth exploring beyond that, raise it with the team instead o
 
 - Never run model training or inference locally (no local CPU or GPU runs). Write code locally and run it on the cluster.
 - Access is only through Open OnDemand (NYU VPN off campus). Jobs are submitted from Jupyter terminals on OOD.
+- The repo lives on the cluster at `/scratch/$USER/affinity-router/`. All large files (overlay, model, datasets, adapters, checkpoints) go in `artifacts/` inside it (git-ignored); paths come from `env/paths.sh`. Files move on/off the cluster through the OOD file browser.
 - Slurm account (required on every job): `csci_ga_3033_085-2026fa`
 - Partitions: `interactive`, `n2c48m24` (CPU), `g2-standard-12` (1× L4), `g2-standard-24` (2× L4), `c12m85-a100-1` (1× A100 40GB), `c24m170-a100-2` (2× A100 40GB, **main experiment partition**)
 - Budget: 300 GPU-hours shared per student allocation. Use L4 partitions for debugging and A100 for real runs.

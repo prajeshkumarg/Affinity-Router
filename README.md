@@ -56,6 +56,7 @@ results/      raw run outputs (git-ignored)
 
 - [Proposal](docs/proposal.md)
 - [Architecture](docs/architecture.md)
+- [HPC setup + adapter training runbook](docs/setup-hpc.md)
 - [Development plan](docs/dev-plan.md)
 - [Tasks](docs/tasks.md)
 
